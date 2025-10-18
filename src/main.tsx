@@ -6,10 +6,12 @@ import App from "@/App.tsx";
 import Layout from "@/layout.tsx";
 import Blog from "@/pages/blog";
 import BlogDetail from "@/blog/blog-detail";
+import ScrollToTop from "@/components/scroll-to-top";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<App />} />
