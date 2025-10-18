@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -179,5 +180,26 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Custom table styles for prose */
+  .prose.prose-invert table {
+    @apply my-6 w-full;
+  }
+  .prose.prose-invert th,
+  .prose.prose-invert td {
+    @apply border border-gray-600 p-4!;
+  }
+  .prose.prose-invert th {
+    @apply bg-gray-800 font-bold;
+  }
+  .prose.prose-invert tr:nth-child(even) {
+    @apply bg-gray-900;
+  }
+}
+
+@layer components {
+  .table-container {
+    @apply overflow-x-auto;
   }
 }

@@ -1,4 +1,5 @@
 import { MenuNavbar } from "@/data";
+import { NavLink } from "react-router";
 type MenuMobileProps = {
   isMenuOpen: boolean;
   toggleMenu: () => void;
@@ -16,13 +17,17 @@ const MenuMobile = ({ isMenuOpen, toggleMenu }: MenuMobileProps) => {
       <ul className="flex flex-col gap-4 rounded-lg bg-[#1f1f1f] p-4 text-lg">
         {MenuNavbar.map((menu, id) => (
           <li key={id}>
-            <a
-              href={menu.href}
-              className="text-secondary hover:text-primary"
+            <NavLink
+              to={menu.href}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-primary"
+                  : "text-secondary hover:text-primary/90"
+              }
               onClick={toggleMenu}
             >
               {menu.name}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>

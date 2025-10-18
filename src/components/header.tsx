@@ -2,6 +2,7 @@ import { MenuNavbar, SocialMediaIcon } from "@/data";
 import { ListTree, X } from "lucide-react";
 import { useState } from "react";
 import MenuMobile from "@/components/menu-mobile";
+import { NavLink } from "react-router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,15 +15,24 @@ const Header = () => {
     <header className="fixed top-0 z-50 w-full p-4">
       <nav className="border-secondary/20 mx-auto flex max-w-6xl items-center justify-between rounded-full border bg-[#1f1f1f] px-6 py-4">
         {/* logo */}
-        <h1 className="text-secondary font-bold">DYR</h1>
+        <NavLink to="/" className="text-secondary font-bold">
+          DYR
+        </NavLink>
 
         {/* menu navbar */}
         <ul className="hidden space-x-6 md:flex">
           {MenuNavbar.map((menu, id) => (
             <li key={id}>
-              <a href={menu.href} className="text-secondary hover:text-primary">
+              <NavLink
+                to={menu.href}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary"
+                    : "text-secondary hover:text-primary/90"
+                }
+              >
                 {menu.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
