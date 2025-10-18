@@ -5,27 +5,27 @@ export const MenuNavbar = [
   {
     id: 1,
     name: "Beranda",
-    href: "#",
+    href: "#Beranda",
   },
   {
     id: 2,
     name: "Tentang Saya",
-    href: "#",
+    href: "#Tentang-Saya",
   },
   {
     id: 3,
     name: "Proyek",
-    href: "#",
+    href: "#Proyek",
   },
   {
     id: 4,
     name: "Blog",
-    href: "#",
+    href: "#Blog",
   },
   {
     id: 5,
     name: "Kontak",
-    href: "#",
+    href: "#Kontak",
   },
 ];
 

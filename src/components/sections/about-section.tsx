@@ -7,7 +7,7 @@ import { CardAbout } from "@/data";
 
 const AboutSection = () => {
   return (
-    <section id="tentang-saya" className="relative py-24">
+    <section id="Tentang-Saya" className="relative scroll-mt-10 py-24">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 lg:flex-row">
         {/* title */}
         <h2 className="text-secondary text-4xl font-bold lg:hidden">

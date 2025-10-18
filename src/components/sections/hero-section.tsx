@@ -4,7 +4,7 @@ import { HeroImage } from "@/assets";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-[125px]">
+    <section id="Beranda" className="relative pt-[125px]">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-12 px-4 lg:flex-row lg:gap-0">
         {/* left content */}
         <div className="relative space-y-10">
