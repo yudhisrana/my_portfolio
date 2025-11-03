@@ -17,7 +17,7 @@ export const blogPosts = [
     id: 2,
     category: "Perkuliahan",
     title:
-      "Filtering, Konklusi, Low Pass Spatial Filter, dan Median Filter dalam Pengolahan Citra Digital",
+      "Filtering, konvolusi, Low Pass Spatial Filter, dan Median Filter dalam Pengolahan Citra Digital",
     slug: "filtering-konklusi-low-pass-spatial-filter-dan-median-filter-dalam-pengolahan-citra-digital",
     date: "Oktober 2025",
     content: PengolahanCitraPertemuanTigaEmpat,
